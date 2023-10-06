@@ -10,6 +10,19 @@ export default defineConfig({
     vue(),
     vueJsx(),
   ],
+  server: {
+    host: '0.0.0.0',
+    port: 8000,
+    open: true,
+    cors: true,
+    // proxy: {
+    //   "": {
+    //     target: "http://123.207.66.120:3000",
+    //     changeOrigin: true,
+    //     rewrite: (path) => path.replace(/^\/api/, ""),
+    //   },
+    // },
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
